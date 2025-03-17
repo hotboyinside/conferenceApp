@@ -1,0 +1,74 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/fonts';
+
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 0;
+	background-color: $primary-gray-dark-color;
+	overflow: hidden;
+	opacity: 0;
+	transition: width 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.show {
+	width: 340px;
+	opacity: 1;
+}
+
+.title {
+	@include heading2($primary-white-color);
+	margin: 0;
+	padding: 24px 0 0 24px;
+	margin-bottom: 11px;
+}
+
+.divider {
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: $primary-gray-color;
+	margin-bottom: 18px;
+}
+
+.messageContainer {
+	flex: 1;
+	overflow-y: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.messagesContainer::-webkit-scrollbar {
+	display: none;
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 12px;
+	gap: 4px;
+}
+
+.lastMessage {
+	width: 100%;
+	height: 50px;
+	background-color: $primary-gray-dark-color;
+}
+
+.controlsContainer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $primary-gray-dark-color;
+}
+
+.controls {
+	width: 316px;
+}

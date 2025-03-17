@@ -1,0 +1,32 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/fonts';
+
+.root {
+	min-width: 332px;
+	max-height: 52px;
+	margin-bottom: 24px;
+}
+
+.input {
+	@include primary-button($primary-white-color);
+	width: 100%;
+	padding: 14px 12px;
+	border-radius: 11px;
+	background-color: $primary-gray-color;
+	outline: none;
+	border-color: transparent;
+}
+
+.errorMessage {
+	@include subtext($secondary-red-color);
+	display: inline-block;
+	margin-top: 8px;
+}
+
+.errorMargin {
+	margin-bottom: 48px;
+}
+
+.errorBorder {
+	border: 1px solid $secondary-red-color;
+}

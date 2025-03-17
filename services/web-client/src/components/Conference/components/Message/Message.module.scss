@@ -1,0 +1,46 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/fonts';
+
+.root {
+	max-width: 100%;
+	flex: 0 auto;
+	align-self: flex-start;
+	display: inline-block;
+	border-radius: 12px;
+	padding: 10px 12px;
+	background-color: $primary-black-color;
+}
+
+.messageRight {
+	align-self: flex-end;
+}
+
+.name {
+	margin: 0;
+	@include subtext-bold($secondary-purple-color);
+	margin-bottom: 4px;
+}
+
+.blueName {
+	color: $primary-blue-color;
+}
+
+.message {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.text {
+	margin: 0;
+	@include subtext($primary-white-color);
+	word-break: break-all;
+}
+
+.divider {
+	@include subtext($overlay-white-50-color);
+}
+
+.time {
+	@include subtext($overlay-white-50-color);
+}

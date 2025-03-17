@@ -1,0 +1,34 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/fonts';
+
+.root {
+	width: 412px;
+	min-height: 440px;
+	background-color: $primary-gray-dark-color;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px;
+}
+
+.image {
+	width: 224px;
+	margin-bottom: 12px;
+	object-fit: cover;
+}
+
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	@include heading1($primary-white-color);
+	margin: 0;
+	margin-bottom: 24px;
+}

@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  mongo_db:
+    container_name: database_container
+    image: mongo:6.0
+    restart: always
+  backend:
+    build:
+      context: ../../services
+      dockerfile: backend/Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      APP_NAME: KMB
+      PORT: 3000
+      NODE_ENV: production
+      APP_ORIGIN: https://kmb.staging.forasoft.com:3001
+      MONGO_URL: mongodb://mongo_db:27017/kmb
+      JWT_SECRET: myjwtsecret
+      JWT_REFRESH_SECRET: myjwtrefreshsecret
+      LIVEKIT_API_KEY: apikey
+      LIVEKIT_API_SECRET: apisecret
+      COOKIE_ACCESS: accessToken
+      COOKIE_REFRESH: refreshToken
+      MAX_USERS: 4
+    depends_on:
+      - mongo_db
+  web-client:
+    build:
+      context: ../../services
+      dockerfile: web-client/Dockerfile
+      args:
+        VITE_API_URL: https://kmb.staging.forasoft.com/api
+        VITE_SOCKET_API_URL: https://kmb.staging.forasoft.com
+        VITE_API_WS_URL: wss://kmb.staging.forasoft.com
+    restart: always
+    ports:
+      - '3001:3001'
+    environment:
+      PORT: 3001
+
+  livekit:
+    build:
+      context: ../../services
+      dockerfile: livekit/Dockerfile
+    network_mode: host
+
+volumes:
+  mongo_db2: {}

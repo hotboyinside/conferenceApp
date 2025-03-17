@@ -1,0 +1,82 @@
+@font-face {
+	font-family: 'Roboto Flex';
+	src: url('/fonts/Roboto-Light.woff2') format('woff2'),
+		url('/fonts/Roboto-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Flex';
+	src: url('/fonts/Roboto-Bold.woff2') format('woff2'),
+		url('/fonts/Roboto-Bold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Flex';
+	src: url('/fonts/Roboto-SemiBold.woff2') format('woff2'),
+		url('/fonts/Roboto-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@mixin heading1($color: #000) {
+	font-family: 'Roboto Flex';
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: 800;
+	color: $color;
+}
+
+@mixin heading2($color: #000) {
+	font-family: 'Roboto Flex';
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 800;
+	color: $color;
+}
+
+@mixin primary-button($color: #000) {
+	font-family: 'Roboto Flex';
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+	color: $color;
+}
+
+@mixin primary-bold($color: #000) {
+	font-family: 'Roboto Flex';
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 800;
+	color: $color;
+}
+
+@mixin primary-text($color: #000) {
+	font-family: 'Roboto Flex';
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+	color: $color;
+}
+
+@mixin subtext-bold($color: #000) {
+	font-family: 'Roboto Flex';
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+	color: $color;
+}
+
+@mixin subtext($color: #000) {
+	font-family: 'Roboto Flex';
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 300;
+	color: $color;
+}

@@ -1,0 +1,10 @@
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+.root {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $primary-black-color;
+}

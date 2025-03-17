@@ -1,0 +1,26 @@
+@import '../../styles/colors';
+
+.root {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	background-color: $primary-black-color;
+}
+
+.container {
+	width: 80%;
+	padding: 0 30px;
+	padding-top: 48px;
+	margin: 0 auto;
+}
+
+.room {
+	--gap: 16px;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: var(--gap);
+}

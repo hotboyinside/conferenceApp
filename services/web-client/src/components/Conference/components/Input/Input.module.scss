@@ -1,0 +1,38 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/fonts';
+
+.root {
+	position: relative;
+}
+
+.input {
+	@include primary-button($primary-white-color);
+	width: 100%;
+	padding: 11px 40px 11px 12px;
+	border-radius: 11px;
+	background-color: $primary-black-color;
+	outline: none;
+	border-color: transparent;
+	transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.input:hover {
+	background-color: $primary-gray-dark-color;
+	border-color: $overlay-white-25-color;
+}
+
+.input::placeholder {
+	color: $overlay-white-25-color;
+	transition: color 0.3s ease-in-out;
+}
+
+.input:hover::placeholder {
+	color: $overlay-white-50-color;
+}
+
+.sendButton {
+	position: absolute;
+	right: 5px;
+	top: 7px;
+	cursor: pointer;
+}

@@ -1,0 +1,52 @@
+@import '../../../../styles/colors';
+
+.root {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 32px;
+}
+
+.greyBtn rect {
+	transition: fill 0.3s ease-in-out;
+	fill: $primary-white-color;
+}
+
+.greyBtn path {
+	transition: fill 0.3s ease-in-out;
+	fill: $primary-black-color;
+}
+
+.toggle:hover rect {
+	fill: $overlay-white-75-color;
+}
+
+.toggle:hover path {
+	fill: $primary-black-color;
+}
+
+.chatBtn {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+
+.chatBtn rect {
+	transition: fill 0.3s ease-in-out;
+	fill: $primary-white-color;
+}
+
+.chatBtn path {
+	transition: fill 0.3s ease-in-out;
+	fill: $primary-black-color;
+}
+
+.activeBtn rect {
+	fill: $primary-blue-color;
+}
+
+.activeBtn path {
+	fill: $primary-white-color;
+}
